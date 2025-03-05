@@ -103,21 +103,30 @@ function nextCv() {
 
   let image = document.getElementById("image");
   let profile = document.getElementById("profile");
-  image.innerHTML = `<img src='${currentCandidate.image}' class="w-32 h-32 mx-auto rounded-full" />`;
-  profile.innerHTML = `
-        
 
-    <ul class="w-80 text-sm mx-auto font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-        <li class="w-full px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">Name: ${currentCandidate.name}</li>
-        <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Age: ${currentCandidate.age} years old</li>
-        <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">City: lives in ${currentCandidate.city} </li>
-        <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Language: primarily works on ${currentCandidate.language}</li>
-        <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Frameworks: with ${currentCandidate.frameworks} framework</li>
-    </ul>
+  if(currentCandidate != undefined){
 
     
+    image.innerHTML = `<img src='${currentCandidate.image}' class="w-32 h-32 mx-auto rounded-full" />`;
+    profile.innerHTML = `
+    
+    
+    <ul class="w-80 text-sm mx-auto font-medium text-gray-900 bg-white border border-gray-200 rounded-lg  dark:border-gray-600 ">
+    <li class="w-full px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">Name: ${currentCandidate.name}</li>
+    <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600 ">Age: ${currentCandidate.age} years old</li>
+    <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">City: lives in ${currentCandidate.city} </li>
+    <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Language: primarily works on ${currentCandidate.language}</li>
+    <li class="w-full px-4 py-2 border-b border-gray-200 dark:border-gray-600">Frameworks: with ${currentCandidate.frameworks} framework</li>
+    </ul>
+    
+    
     `;
+  }
+  else{
+    alert("End of applications")
+    window.location.reload();
+  }
+  
 }
-
-
+  
 

@@ -6,7 +6,7 @@ const data = [
     age: 21,
     city: "Pune",
     language: "javaScript",
-    frameworks: "React.js",
+    framffeworks: "React.js",
     image: "https://randomuser.me/api/portraits/men/88.jpg",
   },
 
@@ -17,6 +17,14 @@ const data = [
     language: "javaScript",
     frameworks: "React.js",
     image: "https://randomuser.me/api/portraits/men/8.jpg",
+  },
+  {
+    name: "Herchelle",
+    age: 22,
+    city: "Pune",
+    language: "English",
+    frameworks: "NAN",
+    image: "https://randomuser.me/api/portraits/men/9.jpg",
   },
 
   {
@@ -86,7 +94,7 @@ function cvIterator(profiles) {
 const candidates = cvIterator(data);
 
 // button listener for next button
-
+nextCv();
 const next = document.getElementById("next");
 next.addEventListener("click", nextCv);
 
